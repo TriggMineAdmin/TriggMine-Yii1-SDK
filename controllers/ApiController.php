@@ -63,8 +63,10 @@ class ApiController
     {
         $response = "";
         
+        $repository = new EventsRepository;
+        
         $reflection = new \ReflectionClass( $eventDto );
-        $method = EventsRepository::GetEventUrl( $reflection->getShortName() );
+        $method = $repository->GetEventUrl( $reflection->getShortName() );
 
         try
         {
