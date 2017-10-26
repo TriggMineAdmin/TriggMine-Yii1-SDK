@@ -7,7 +7,7 @@
 class CustomerHistoryEvent
 {
     /**
-      * Instances of ProspectEvent class (customers) to be exported.
+      * Instances of ProspectExportEvent class (customers) to be exported.
       */
     public $prospects;
 }

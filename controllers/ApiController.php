@@ -3,8 +3,17 @@
   * The main method which sends data to TriggMine.
   *
   */
-require 'protected/modules/triggmine/components/vendor/autoload.php';
-Yii::import('application.modules.triggmine.models.EventsRepository');
+if ( strpos( Yii::app()->basePath, 'backend' ) > 0 )
+{
+    require Yii::app()->basePath.'/modules/triggmine/components/vendor/autoload.php';
+    Yii::import('webroot.protected.modules.triggmine.models.EventsRepository');
+}
+else
+{
+    require Yii::app()->basePath.'/../backend/protected/modules/triggmine/components/vendor/autoload.php';
+    Yii::import('webroot.backend.protected.modules.triggmine.models.EventsRepository');
+}
+
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7;

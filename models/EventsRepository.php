@@ -15,8 +15,9 @@ class EventsRepository
     {
         $urlRepository = array(
                 'CartEvent'             => '/api/events/cart',
-                'OrderHistoryEvents'    => '/api/events/history',
-                'CustomerHistoryEvents' => '/api/events/history/prospects',
+                'OrderHistoryEvent'     => '/api/events/history',
+                'CustomerHistoryEvent'  => '/api/events/history/prospects',
+                'ProductHistoryEvent'   => '/api/products/import',
                 'LoginEvent'            => '/api/events/prospect/login',
                 'LogoutEvent'           => '/api/events/prospect/logout',
                 'NavigationEvent'       => '/api/events/navigation',
